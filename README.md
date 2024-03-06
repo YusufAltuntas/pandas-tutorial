@@ -2,31 +2,31 @@
 
 [**1. Pandas Temelleri**](#pandas-temelleri)
 
-    - [**1.1 Kurulum**](#kurulum)
-      - [Pip Kullanarak Kurulum](#111-pip-kullanarak-kurulum)
-      - [Conda Kullanarak Kurulum](#112-conda-kullanarak-kurulum)
+  - [**1.1 Kurulum**](#11-kurulum)
+    - [Pip Kullanarak Kurulum](#111-pip-kullanarak-kurulum)
+    - [Conda Kullanarak Kurulum](#112-conda-kullanarak-kurulum)
    
-(**2. Veri Yapıları**)[#2-pandas-veri-yapıları]
+[**2. Veri Yapıları**](#2-pandas-veri-yapıları)
 
-  - **Pandas Serileri**
+  - [**Pandas Serileri**](#21-pandas-serileri-series)
       - Seri nedir?
-      - Seri oluşturma
-        - Listelerden seri oluşturma
-        - NumPy dizilerinden seri oluşturma
-      - Seri İndeksleme ve Dilimleme
-      - Seri Özellikleri ve Metodları
+      - [Seri oluşturma](#211-seri-oluşturma)
+        - [Listelerden seri oluşturma](#listelerden-seri-oluşturma)
+        - [NumPy dizilerinden seri oluşturma](#numpy-dizilerinden-seri-oluşturma)
+      - [Seri İndeksleme ve Dilimleme](#212-seri-i̇ndeksleme-ve-dilimleme)
+      - [Seri Özellikleri ve Metodları](#213-seri-özellikleri-ve-metodları)
         - `head()` ve `tail()`
         - `describe()`
         - `value_counts()`
         - `unique()`
    
-  - **Pandas DataFrames**
+  - [**Pandas DataFrames**](#22-pandas-dataframes-veri-çerçeveleri)
       - Veri çerçevesi nedir?
-      - Veri çerçevesi oluşturma
-        - Sözlükten veri çerçevesi oluşturma
-        - NumPy dizisinden veri çerçevesi oluşturma
-      - Veri Çerçevesi İndeksleme ve Dilimleme
-      - Veri Çerçevesi Özellikleri ve Metodları
+      - [Veri çerçevesi oluşturma](#221-veri-çerçevesi-oluşturma)
+        - [Sözlükten veri çerçevesi oluşturma](#sözlükten-dataframe-oluşturma)
+        - [NumPy dizisinden veri çerçevesi oluşturma](#numpy-dizilerinden-seri-oluşturma)
+      - [Veri Çerçevesi İndeksleme ve Dilimleme](#222-dataframe-i̇ndeksleme-ve-dilimleme)
+      - [Veri Çerçevesi Özellikleri ve Metodları](#223-dataframe-özellikleri-ve-metodları)
         - `info()`
         - `head()` ve `tail()`
         - `describe()`
@@ -34,164 +34,147 @@
         - `columns`
         - `index`
 
-3. **Veri Okuma ve Yazma**
-    - CSV dosyalarından veri okuma
-    - Excel dosyalarından veri okuma
-    - Veri çerçevesini CSV ve Excel formatlarında kaydetme
+[**3. Veri Okuma ve Yazma**](#3-veri-okuma-ve-yazma)
+  - [CSV dosyalarından veri okuma](#csv-dosyalarından-veri-okuma)
+  - [Excel dosyalarından veri okuma](#excel-dosyalarından-veri-okuma)
+  - [Veri çerçevesini CSV ve Excel formatlarında kaydetme](#veri-çerçevesini-csv-ve-excel-formatlarında-kaydetme)
 
-4. **Veri Kontrolü**
+[**4. Veri Kontrolü**](#4-veri-kontrolü)
 
-    - İlk ve Son Gözlemleri Görüntüleme
-    - Satır ve Sütun Sayısı Bilgisi Alma: shape
-    - Veri Seti Hakkında Detaylı Bilgi Alma: info()
-    - Sütun ve Satır Gösterimi Ayarları: pd.set_option()
+  - [İlk ve Son Gözlemleri Görüntüleme](#i̇lk-ve-son-gözlemleri-görüntüleme)
+  - [Satır ve Sütun Sayısı Bilgisi Alma: shape](#satır-ve-sütun-sayısı-bilgisi-alma-shape)
+  - [Veri Seti Hakkında Detaylı Bilgi Alma: info()](#veri-seti-hakkında-detaylı-bilgi-alma-info)
+  - [Sütun ve Satır Gösterimi Ayarları: pd.set_option()](#sütun-ve-satır-gösterimi-ayarları-pdset_option)
 
-5. **Satır ve Sütunlara Erişim İşlemleri**
+[**5. Satır ve Sütunlara Erişim İşlemleri**](#5-satır-ve-sütun-i̇şlemleri)
 
-    - **Sütunlara Erişme**
-      - Tekil Erişim
-      - Çoklu Erişim
+  - [**Sütunlara Erişme**](#51-sütunlara-erişme)
+    - [Tekil Erişim](#511-tekil-erişim)
+    - [Çoklu Erişim](#512-çoklu-erişim)
 
-    - **Satırlara Erişme: iloc ve loc**
-      - iloc()
-      - loc()
-      - Satır ve Sütunlara Erişme: İki Nokta Kullanımı (indexing)
+  - [**Satırlara Erişme: iloc ve loc**](#52-satırlara-erişme-iloc-ve-loc)
+    - [iloc()](#521-iloc)
+    - [loc()](#loc)
 
-    - **Satır ve Sütunlara Erişme: İki Nokta Kullanımı (indexing)**
-      - Belirli Bir Satır Aralığına Erişme
-      - Belirli Bir Sütun Aralığına Erişme
-      - Belirli Bir Satır ve Sütun Aralığına Erişme
-      - Koşullu Erişim ve Dilimleme
+  - [**Satır ve Sütunlara Erişme: İki Nokta Kullanımı (indexing)**](#53-satır-ve-sütunlara-erişme-i̇ki-nokta-kullanımı-indexing)
+    - [Belirli Bir Satır Aralığına Erişme](#531-belirli-bir-satır-aralığına-erişme)
+    - [Belirli Bir Sütun Aralığına Erişme](#532-belirli-bir-sütun-aralığına-erişme)
+    - [Belirli Bir Satır ve Sütun Aralığına Erişme](#533-belirli-bir-satır-ve-sütun-aralığına-erişme)
+    - [Koşullu Erişim ve Dilimleme](#534-koşullu-erişim-ve-dilimleme)
 
-    - **Sütuna Ait Değerleri Saydırma: value_counts()**
+  - [**Sütuna Ait Değerleri Saydırma: value_counts()**](#54-sütuna-ait-değerleri-saydırma-value_counts)
 
-6. **İndex İşlemleri**
+[**6. İndex İşlemleri**](#6-i̇ndex-i̇şlemleri)
 
-    - **İndeks nedir?**
+  - [**İndeks nedir?**](#61-i̇ndeks-nedir)
 
-    - **İndeks Ayarlama: set_index() ve index_col**
-      - set_index()
-      - index_col Kullanımı
+  - [**İndeks Ayarlama: set_index() ve index_col**](#62-i̇ndeks-ayarlama-set_index-ve-index_col)
+    - [set_index()](#621-set_index)
+    - [index_col Kullanımı](#622-index_col-kullanımı)
 
-    - **İndeks Aracılığıyla Erişim: loc**
-    - **İndeks Sıfırlama: reset_index()**
-    - **İndekslerin Sıralanması: sort_index()**
+  - [**İndeks Aracılığıyla Erişim: loc**](#63-i̇ndeks-aracılığıyla-erişim-loc)
+  - [**İndeks Sıfırlama: reset_index()**](#64-i̇ndeks-sıfırlama-reset_index)
+  - [**İndekslerin Sıralanması: sort_index()**](#65-i̇ndekslerin-sıralanması-sort_index)
 
-7. **Filtreleme**
+[**7.Filtreleme**](#7-filtreleme)
 
-    - **Tekli Filtreleme: İç içe ve loc**
+  - [**Tekli Filtreleme: İç içe ve loc**](#71-tekli-filtreleme-i̇ç-içe-ve-loc)
 
-    - **Çoklu Filtreleme: &, | ve isin()**
-      - Mantıksal Operatörler
-      - isin() Kullanımı
+  - [**Çoklu Filtreleme: &, | ve isin()**](#72-çoklu-filtreleme---ve-isin)
+    - [Mantıksal Operatörler](#721-mantıksal-operatörler)
+    - [isin() Kullanımı](#722-isin-kullanımı)
 
-    - **String İçerenleri Filtreleme: str.contains()**
-
-
-8. **Sütun ve Satır Güncelleme**
-
-    - **Sütun Güncelleme: columns, List Comprehension, str.replace(), rename**
-      - columns Kullanımı
-      - List Comprehension Kullanımı
-      - str.replace() Kullanımı
-      - rename() Kullanımı
-
-    - **Satır Güncelleme: loc, at, str.lower(), apply(), applymap(), lambda, map() ve replace()**
-      - loc Kullanımı
-      - at Kullanımı
-      - Çoklu Satır Güncellemesi(str.lower(), apply() ve lambda ve map() ve replace() fonksiyonları)
-        - str.lower() Kullanımı
-        - apply() Kullanımı
-        - apply() ve lambda Kullanımı
-        - map() ve lambda Kullanımı
-        - map() ve replace Yöntemi
+  - [**String İçerenleri Filtreleme: str.contains()**](#73-string-i̇çerenleri-filtreleme-strcontains)
 
 
-9. **Sütun ve Satır Ekleme ve Kaldırma**
+[**8. Sütun ve Satır Güncelleme**](#8-sütun-ve-satır-güncelleme)
 
-    - **Sütun Ekleme ve Kaldırma: birleştirme, drop(), str.split(), assign(), merge(), join()**
-      - Sütunların Birleştirilmesi
-      - drop() Yöntemi
-      - str.split() Kullanımı
-      - assign() Kullanımı
-      - join() Kullanımı
-      - merge() Kullanımı
+  - [**Sütun Güncelleme: columns, List Comprehension, str.replace(), rename**](#81-sütun-güncelleme-columns-list-comprehension-strreplace-rename)
+    - [columns Kullanımı](#811-columns-kullanımı)
+    - [List Comprehension Kullanımı](#812-list-comprehension-kullanımı)
+    - [str.replace() Kullanımı](#813-strreplace-kullanımı)
+    - [rename() Kullanımı](#814-rename-kullanımı)
+
+  - [**Satır Güncelleme: loc, at, str.lower(), apply(), applymap(), lambda, map() ve replace()**](#82-satır-güncelleme-loc-at-strlower-apply-applymap-lambda-map-ve-replace)
+    - [loc Kullanımı](#821-loc-kullanımı)
+    - [at Kullanımı](#822-at-kullanımı)
+    - [Çoklu Satır Güncellemesi(str.lower(), apply() ve lambda ve map() ve replace() fonksiyonları)](#823-çoklu-satır-güncellemesistrlower-apply-ve-lambda-ve-map-ve-replace-fonksiyonları)
+      - [str.lower() Kullanımı](#strlower-kullanımı)
+      - [apply() Kullanımı](#apply-kullanımı)
+      - [apply() ve lambda Kullanımı](#apply-ve-lambda-kullanımı)
+      - [map() ve lambda Kullanımı](#map-ve-lambda-kullanımı)
+      - [map() ve replace Yöntemi](#map-ve-replace-yöntemi)
+
+
+[**9. Sütun ve Satır Ekleme ve Kaldırma**](#9-sütun-ve-satır-ekleme-ve-kaldırma)
+
+  - [**Sütun Ekleme ve Kaldırma: birleştirme, drop(), str.split(), assign(), merge(), join()**](#91-sütun-ekleme-ve-kaldırma-birleştirme-drop-strsplit-assign-merge-join)
+    - [Sütunların Birleştirilmesi](#911-sütunların-birleştirilmesi)
+    - [drop() Yöntemi](#912-drop-yöntemi)
+    - [str.split() Kullanımı](#913-strsplit-kullanımı)
+    - [assign() Kullanımı](#914-assign-metodu)
+    - [join() Kullanımı](#915-join-metodu)
+    - [merge() Kullanımı](#916-merge-metodu)
     
-    - **Satır Ekleme ve Kaldırma: append(), concat() ve drop()**
-      - concat() Metodu
-      - drop() Metodu
+  - [**Satır Ekleme ve Kaldırma: append(), concat() ve drop()**](#92-satır-ekleme-ve-kaldırma-append-concat-ve-drop)
+    - [concat() Metodu](#921-concat-metodu)
+    - [drop() Metodu](#922-drop-metodu)
 
 
-10. **Veri Analizi**
+[**10. Veri Analizi**](#10-veri-analizi)
 
-    - **Temel İstatistiksel Hesaplamalar**
-      - describe() Metodu
-      - mean() Metodu
-      - median() Metodu
-      - Değerlerin Saydırılması: value_counts()
-      - min(), max(), sum(), std(), nlargest(), nsmallest()
-      - Bir Gruba Göre İstatistik: groupby(), agg(), median() ve std()
-      - Bir String İçeriğine Göre Bir İstatistik: groupby(), apply(), lambda, str.contains() ve sum()
+  - [**Temel İstatistiksel Hesaplamalar**](#101-temel-i̇statistiksel-hesaplamalar)
+    - [describe() Metodu](#1011-describe-metodu)
+    - [mean() Metodu](#1012-mean-metodu)
+    - [median() Metodu](#1013-median-metodu)
+    - [Değerlerin Saydırılması: value_counts()](#1014-değerlerin-saydırılması-value_counts)
+    - [min(), max(), sum(), std(), nlargest(), nsmallest()](#1015-min-max-sum-std-nlargest-nsmallest)
+    - [Bir Gruba Göre İstatistik: groupby(), agg(), median() ve std()](#1016-bir-gruba-göre-i̇statistik-groupby-agg-median-ve-std)
+    - [Bir String İçeriğine Göre Bir İstatistik: groupby(), apply(), lambda, str.contains() ve sum()](#1017-bir-string-i̇çeriğine-göre-bir-i̇statistik-groupby-apply-lambda-strcontains-ve-sum)
     
-    - **Veri Sıralama**
-      - sort_values()
-      - İndekse Göre Sıralama: sort_index()
-      - Serilerin Sıralanması: sort_values()
-      - En Büyüklerin Sıralanması: nlargest()
-      - En Küçüklerin Sıralanması: nsmallest()
+  - [**Veri Sıralama**](#102-veri-sıralama)
+    - [sort_values()](#1021-sort_values)
+    - [İndekse Göre Sıralama: sort_index()](#1022-i̇ndekse-göre-sıralama-sort_index)
+    - [Serilerin Sıralanması: sort_values()](#1023-serilerin-sıralanması-sort_values)
+    - [En Büyüklerin Sıralanması: nlargest()](#1024-en-büyüklerin-sıralanması-nlargest)
+    - [En Küçüklerin Sıralanması: nsmallest()](#1025-en-küçüklerin-sıralanması-nsmallest)
 
-    - **Gruplama ve Özetleme**
-      - Gruplayarak Saydırma, Yüzde Alma ve İndeks İnceleme
+  - [**Gruplama ve Özetleme**](#103-gruplama-ve-özetleme)
+    - [Gruplayarak Saydırma, Yüzde Alma ve İndeks İnceleme](#1031-gruplayarak-saydırma-yüzde-alma-ve-i̇ndeks-i̇nceleme)
 
-11. **Veri İşleme ve Temizleme**
+  - [**Veriyi Belirli Aralıklara Bölme**](#104-veriyi-belirli-aralıklara-bölme)
+    - [pd.cut() Fonksiyonu](#pdcut-fonksiyonu)
+    - [pd.qqut() Fonksiyonu](#pdqcut-fonksiyonu)
 
-    - **Eksik Verilerle Başa Çıkma**
-      - Eksik Verileri Tespit Etme: isnull() ve notnull()
-      - Eksik Verileri Temizleme: dropna()
-      - Eksik ""NaN" Değerleri Değiştirme: replace() ve fillna()
-      - NaN Değerleri Kendinden Bir Önceki veya Bir Sonraki Değere Çevirme: ffill() ve bfill()
+[**11. Veri İşleme ve Temizleme**](#11-veri-i̇şleme-ve-temizleme)
 
-    - **Veri Türü Dönüşümleri**
-      - ``astype()`` Metodu
-      - ``to_numeric()`` Fonksiyonu
-      - ``to_datetime()`` Fonksiyonu
-      - ``astype()`` ve ``map()`` Kullanımı
+  - [**Eksik Verilerle Başa Çıkma**](#111-eksik-verilerle-başa-çıkma)
+    - [Eksik Verileri Tespit Etme: isnull() ve notnull()](#111-eksik-verilerle-başa-çıkma)
+    - [Eksik Verileri Temizleme: dropna()](#1112-eksik-verileri-temizleme-dropna)
+    - [Eksik ""NaN" Değerleri Değiştirme: replace() ve fillna()](#1113-eksik-nan-değerleri-değiştirme-replace-ve-fillna)
+    - [NaN Değerleri Kendinden Bir Önceki veya Bir Sonraki Değere Çevirme: ffill() ve bfill()](#1114-nan-değerleri-kendinden-bir-önceki-veya-bir-sonraki-değere-çevirme-ffill-ve-bfill)
+
+  - [**Veri Türü Dönüşümleri**](#112-veri-türü-dönüşümleri)
+    - [``astype()`` Metodu](#1-astype-metodu)
+    - [``to_numeric()`` Fonksiyonu](#2-to_numeric-fonksiyonu)
+    - [``to_datetime()`` Fonksiyonu](#3-to_datetime-fonksiyonu)
+    - [``astype()`` ve ``map()`` Kullanımı](#4-astype-ve-map-kullanımı)
     
-    - **Veri Çerçevesinde Tekrar Eden Değerleri Kaldırma**
-      - `drop_duplicates()` Metodu
-      - `unique()` ve `nunique()` Metotları
+  - [**Veri Çerçevesinde Tekrar Eden Değerleri Kaldırma**](#113-veri-çerçevesinde-tekrar-eden-değerleri-kaldırma)
+    - [`drop_duplicates()` Metodu](#1131-drop_duplicates-metodu)
+    - [`unique()` ve `nunique()` Metotları](#1132-unique-ve-nunique-metotları)
 
+[**12. Zaman Serisi Verileri**](#12-zaman-serisi-verileri)
 
+  - [**Tarih ve Saat Veri Türleri**](#121-tarih-ve-saat-veri-türleri)
+    - [datetime Sınıfı](#1211-datetime-sınıfı)
+    - [timedelta Sınıfı](#1212-timedelta-sınıfı)
+    - [strftime() ve strptime() Metodları](#1213-strftime-ve-strptime-metodları)
 
-
-6. **Veri Görselleştirme**
-   - Veri çerçevesi görselleştirme
-     - `plot()`
-     - `hist()`
-     - `boxplot()`
-   - Grafiklerin özelleştirilmesi
-
-
-
-8. **Veri Birleştirme ve Birleştirme**
-   - Veri birleştirme
-     - `concat()`
-     - `merge()`
-   - Veri çerçeveleri arası birleştirme
-     - `join()`
-
-9. **Zaman Serisi Verileri**
-   - Tarih ve saat veri türleri
-   - Zaman serisi oluşturma
-   - Zaman serileri üzerinde işlemler
-     - Filtreleme, örnekleme, kaydırma
-
-10. **Pandas İleri Seviye Kavramlar**
-    - İleri seviye indeksleme ve seçme
-    - Pandas'ın hızlandırılması ve performans optimizasyonu
-    - Büyük veri kümeleri ile çalışma
-
-Bu başlıklar altında Pandas'ın temellerinden başlayarak ileri seviye kavramlara kadar geniş bir yelpazede bilgi edinebilirsiniz. Her bir başlık altında örneklerle detaylı bir şekilde konuları ele alacağız.
+  - [**Zaman Serisi Oluşturma**](#122-zaman-serisi-oluşturma)
+    - [Manuel Olarak Zaman Serisi Oluşturma](#1221-manuel-olarak-zaman-serisi-oluşturma)
+    - [Pandas ile Zaman Serisi Oluşturma](#1222-pandas-ile-zaman-serisi-oluşturma)
+    - [NumPy ile Zaman Serisi Oluşturma](#1223-numpy-ile-zaman-serisi-oluşturma)
 
 ## **Pandas Temelleri**
 
@@ -8089,6 +8072,59 @@ df.groupby(["Sektör"])["HalkaAciklikOraniGrup"].value_counts(normalize=True).lo
 
 
 
+### **10.4 Veriyi Belirli Aralıklara Bölme**
+
+#### **pd.cut() Fonksiyonu**
+
+`pd.cut()` fonksiyonu, belirli bir veri serisini kullanarak, belirli aralıklara bölerek kategorik bir değişken oluşturmanızı sağlar. Bu fonksiyon, özellikle sürekli bir değişkeni kategorik bir değişkene dönüştürmek için kullanışlıdır. Örneğin, yaş verilerini kullanarak farklı yaş grupları oluşturabilirsiniz.
+
+`
+pd.cut(x, bins, right=True, labels=None, retbins=False, precision=3, include_lowest=False, duplicates='raise')
+`
+##### **Parametreler:**
+
+- **`x`**: Bölünecek olan veri serisi.
+- **`bins`**: Veri serisini bölecek aralıkları belirten bir sayı, liste veya dizin. Aralıkların sayısını belirtmek için bir sayı, aralık sınırlarını belirtmek için bir liste veya dizin kullanabilirsiniz.
+- **`labels`**: Oluşturulan kategorik değişkenler için etiketleri belirten bir liste. Bu parametre, belirtilmezse, otomatik olarak aralık sınırlarının ortalamalarını kullanır.
+- **`right`**: True veya False değer alır. True ise aralık sınırları dahil, False ise aralık sınırları dahil değil olarak hesaplanır. Varsayılan değeri True'dur.
+- **`include_lowest`**: True veya False değer alır. True ise en düşük aralık sınırı dahil, False ise dahil değil olarak hesaplanır. Varsayılan değeri False'dur.
+- **`precision`**: Aralıkların sayısal hassasiyetini belirler.
+- **`duplicates`**: Aralık sınırları arasında
+
+#### **pd.qcut()** Fonksiyonu
+
+`pd.qcut()` fonksiyonu, veri serisini belirli sayıda eşit boyutlu kategoriye böler. Bu bölmeyi yaparken, her kategori içinde aynı sayıda gözlem olacak şekilde böler. Bu fonksiyon, verilerin dağılımına göre eşit büyüklükte kategorilere ayırmanızı sağlar.
+
+`
+pd.qcut(x, q, labels=None, retbins=False, precision=3, duplicates='raise')
+`
+
+##### Parametreler:
+
+- **`x`**: Bölünecek olan veri serisi.
+- **`q`**: Bölünme işlemi sırasında oluşturulacak kategori sayısı veya kategori boyutlarını belirleyen kesim noktaları.
+- **`labels`**: Oluşturulan kategorik değişkenler için etiketleri belirten bir liste. Bu parametre, belirtilmezse, otomatik olarak kesim noktalarının ortalamalarını kullanır.
+- **`retbins`**: True veya False değer alır. True ise kesim noktalarını ve sınırlarını döndürür, False ise sadece kesim noktalarını döndürür. Varsayılan değeri False'dur.
+- **`precision`**: Kesim noktalarının sayısal hassasiyetini belirler.
+- **`duplicates`**: Kesim noktaları arasında çakışan değerler olması durumunda nasıl davranılacağını belirler. "raise" (varsayılan), "drop" veya "raise" değerlerini alır.
+
+
+```python
+import pandas as pd
+
+# Örnek bir veri serisi oluşturalım
+notlar = [60, 75, 80, 85, 90, 95, 100]
+
+# Veri serisini belirli sayıda eşit boyutlu kategoriye bölelim
+not_gruplari = pd.qcut(x=notlar, q=3, labels=['Düşük', 'Orta', 'Yüksek'])
+
+print(not_gruplari)
+```
+
+    ['Düşük', 'Düşük', 'Düşük', 'Orta', 'Orta', 'Yüksek', 'Yüksek']
+    Categories (3, object): ['Düşük' < 'Orta' < 'Yüksek']
+    
+
 # **11) Veri İşleme ve Temizleme**
 
 ## **11.1 Eksik Verilerle Başa Çıkma**
@@ -9651,7 +9687,183 @@ print("Benzersiz Değerlerin Sayısı:", num_unique_values)
     Benzersiz Değerlerin Sayısı: 3
     
 
+# **12) Zaman Serisi Verileri**
+
+## Zaman Serisi Verileri Nedir?
+
+Zaman serisi verileri, zamanla değişen bir veya birden fazla değişkenin düzenli aralıklarla ölçüldüğü veri türüdür. Genellikle zaman serileri, zamana göre düzenlenmiş bir gözlem dizisi şeklinde temsil edilir ve veri analizinde zaman boyunca değişen desenleri, trendleri ve ilişkileri analiz etmek için kullanılır.
+
+Zaman serisi verileri genellikle aşağıdaki özelliklere sahiptir:
+
+- **Zaman bileşeni**: Veriler, belirli bir zaman aralığında toplanmış veya ölçülmüş olmalıdır. Örneğin, saatlik, günlük, aylık veya yıllık zaman aralıklarında olabilir.
+  
+- **Zaman sırası**: Gözlemler, zaman sırasına göre düzenlenmiştir. Yani, bir gözlem bir sonraki gözlemden önce veya sonra gerçekleşmiştir.
+
+- **Zamana bağlı değişkenlik**: Zaman serisi verilerinde, zamanla değişen bir veya daha fazla değişken bulunur. Bu değişkenler genellikle belirli bir olayın veya koşulun zaman içinde nasıl değiştiğini gösterir.
+
+Zaman serisi verileri, birçok farklı alanda yaygın olarak kullanılır. Örneğin:
+
+- Ekonomi ve finans: Hisse senedi fiyatları, döviz kurları, enflasyon oranları gibi ekonomik verilerin zaman serisi analizi.
+  
+- Hava durumu: Sıcaklık, nem, rüzgar hızı gibi meteorolojik verilerin zaman serisi analizi.
+  
+- Üretim ve endüstri: Üretim miktarları, tüketim eğilimleri gibi endüstriyel verilerin zaman serisi analizi.
+  
+- Sağlık: Hastalık yayılımı, ilaç etkileri gibi sağlık verilerinin zaman serisi analizi.
+
+Zaman serisi verilerinin analizi, gelecekteki trendleri tahmin etmek, geçmiş performansı değerlendirmek, anormallikleri tespit etmek ve karar alma süreçlerini desteklemek için önemlidir. Bu nedenle, zaman serisi verileri, istatistiksel ve makine öğrenimi tekniklerinin kullanıldığı birçok analiz ve modelleme yöntemine konu olmuştur.
+
 
 ```python
+from datetime import datetime
 
+# Tarih ve saat oluşturma
+dt = datetime(2023, 12, 31, 23, 59, 59)
+print(dt)
 ```
+
+    2023-12-31 23:59:59
+    
+
+* Yukarıdaki örnekte, 31 Aralık 2023 tarihini ve 23:59:59 saatini temsil eden bir `datetime` nesnesi oluşturulmuştur.
+
+## **12.1 Tarih ve Saat Veri Türleri**
+
+Tarih ve saat veri türleri, zaman serisi verilerinin temel yapı taşlarıdır. Python'da, tarih ve saat verilerini temsil etmek için datetime modülü kullanılır. Bu modül, datetime ve timedelta gibi birçok sınıfı içerir ve tarihleri oluşturmak, manipüle etmek ve aritmetik işlemler yapmak için kullanılır.
+
+### **12.1.1 datetime Sınıfı**
+
+``datetime`` sınıfı, tarih ve saati temsil etmek için kullanılır. Tarih ve saat bilgileri, yıl, ay, gün, saat, dakika, saniye ve milisaniye cinsinden saklanabilir.
+
+
+```python
+from datetime import datetime
+
+# Tarih ve saat oluşturma
+dt = datetime(2023, 12, 31, 23, 59, 59)
+print(dt)
+```
+
+    2023-12-31 23:59:59
+    
+
+* Yukarıdaki örnekte, 31 Aralık 2023 tarihini ve 23:59:59 saatini temsil eden bir datetime nesnesi oluşturulmuştur.
+
+### **12.1.2 timedelta Sınıfı**
+
+`timedelta` sınıfı, iki tarih arasındaki zaman farkını temsil etmek için kullanılır. Bu fark, gün, saat, dakika, saniye ve milisaniye cinsinden ifade edilebilir.
+
+
+```python
+from datetime import timedelta
+
+# Zaman farkı oluşturma
+diff = timedelta(days=5, hours=3, minutes=30)
+print(diff)
+```
+
+    5 days, 3:30:00
+    
+
+* Yukarıdaki örnekte, 5 gün 3 saat 30 dakika sürecek bir `timedelta` nesnesi oluşturulmuştur.
+
+### **12.1.3 strftime() ve strptime() Metodları**
+
+`strftime()` metodu, bir `datetime` nesnesini belirli bir biçimde biçimlendirmek için kullanılırken, `strptime()` metodu ise bir tarih ve saat dizesini bir `datetime` nesnesine dönüştürmek için kullanılır.
+
+
+```python
+from datetime import datetime
+
+# Tarih ve saat dönüşümü
+dt_str = "2023-12-31 23:59:59"
+dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S")
+print(dt)
+
+# Tarih ve saat biçimlendirme
+dt_formatted = dt.strftime("%d/%m/%Y %I:%M %p")
+print(dt_formatted)
+```
+
+    2023-12-31 23:59:59
+    31/12/2023 11:59 PM
+    
+
+* Yukarıdaki örnekte, bir tarih ve saat dizesi bir `datetime` nesnesine dönüştürülmüş ve ardından biçimlendirilmiştir.
+
+## **12.2 Zaman Serisi Oluşturma**
+
+Zaman serisi verileri, zamanla değişen bir veya birden fazla değişkenin düzenli aralıklarla ölçüldüğü veri türüdür. Python'da, zaman serisi verilerini oluşturmak için birkaç farklı yöntem bulunmaktadır. Bu yöntemlerden bazıları şunlardır:
+
+### **12.2.1 Manuel Olarak Zaman Serisi Oluşturma**
+
+Zaman serisi verilerini manuel olarak oluşturmak için `datetime` modülünden yararlanabiliriz. Bu yöntemde, belirli bir zaman aralığı boyunca düzenli aralıklarla ölçümler yaparak zaman serisini oluştururuz.
+
+
+```python
+from datetime import datetime, timedelta
+
+# Başlangıç tarihi
+start_date = datetime(2022, 1, 1)
+
+# Zaman serisini oluşturma
+time_series = []
+for i in range(10):
+    time_series.append(start_date + timedelta(days=i))
+
+print(time_series)
+```
+
+    [datetime.datetime(2022, 1, 1, 0, 0), datetime.datetime(2022, 1, 2, 0, 0), datetime.datetime(2022, 1, 3, 0, 0), datetime.datetime(2022, 1, 4, 0, 0), datetime.datetime(2022, 1, 5, 0, 0), datetime.datetime(2022, 1, 6, 0, 0), datetime.datetime(2022, 1, 7, 0, 0), datetime.datetime(2022, 1, 8, 0, 0), datetime.datetime(2022, 1, 9, 0, 0), datetime.datetime(2022, 1, 10, 0, 0)]
+    
+
+* Yukarıdaki örnekte, başlangıç tarihinden itibaren 10 gün boyunca her günün tarihini içeren bir zaman serisi oluşturulmuştur.
+
+### **12.2.2 Pandas ile Zaman Serisi Oluşturma**
+
+Pandas kütüphanesi, zaman serisi verilerini oluşturmak için kullanışlı bir araçtır. `pd.date_range()` fonksiyonu, belirli bir tarih aralığında veya frekansta zaman serisi oluşturmak için kullanılabilir.
+
+* Örneğin, bir zaman serisi oluşturmak için 2024 yılının Ocak ayındaki günlerin bir listesini kullanalım:
+
+
+```python
+import pandas as pd
+
+# Zaman serisini oluşturma
+time_series = pd.date_range(start='2024-01-01', end='2024-01-31', freq='D')
+print(time_series)
+```
+
+    DatetimeIndex(['2024-01-01', '2024-01-02', '2024-01-03', '2024-01-04',
+                   '2024-01-05', '2024-01-06', '2024-01-07', '2024-01-08',
+                   '2024-01-09', '2024-01-10', '2024-01-11', '2024-01-12',
+                   '2024-01-13', '2024-01-14', '2024-01-15', '2024-01-16',
+                   '2024-01-17', '2024-01-18', '2024-01-19', '2024-01-20',
+                   '2024-01-21', '2024-01-22', '2024-01-23', '2024-01-24',
+                   '2024-01-25', '2024-01-26', '2024-01-27', '2024-01-28',
+                   '2024-01-29', '2024-01-30', '2024-01-31'],
+                  dtype='datetime64[ns]', freq='D')
+    
+
+* Burada, start parametresi başlangıç tarihini, end parametresi bitiş tarihini, ve freq parametresi tarihler arasındaki adımı belirtir. D frekansı günlük olarak adım atılacağını belirtir.
+
+### **12.2.3 NumPy ile Zaman Serisi Oluşturma**
+
+NumPy kütüphanesi de zaman serisi verilerini oluşturmak için kullanılabilir. `np.arange()` veya `np.linspace()` gibi fonksiyonlarla belirli bir aralıkta veya belirli adımlarla zaman serisi oluşturulabilir.
+
+
+```python
+tarihler = np.arange('2024-01-01', '2024-01-11', dtype='datetime64[D]')
+tarihler
+```
+
+
+
+
+    array(['2024-01-01', '2024-01-02', '2024-01-03', '2024-01-04',
+           '2024-01-05', '2024-01-06', '2024-01-07', '2024-01-08',
+           '2024-01-09', '2024-01-10'], dtype='datetime64[D]')
+
+
+
+* Burada, ``'2024-01-01'`` başlangıç tarihi, ``2024-01-11`` ise bitiş tarihidir. ``dtype='datetime64[D]'`` ifadesi, tarihlerin günlük olarak depolanacağını belirtir.
