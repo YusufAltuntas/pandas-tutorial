@@ -1,12 +1,12 @@
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*3GbLagVDPY9QKjjgB_Tfqw.png)
 
-1. **Pandas Temelleri**
+[**1. Pandas Temelleri**](#pandas-temelleri)
 
-    - **1.1 Kurulum**
-      - Pip Kullanarak Kurulum
-      - Conda Kullanarak Kurulum
+    - [**1.1 Kurulum**](#kurulum)
+      - [Pip Kullanarak Kurulum](#111-pip-kullanarak-kurulum)
+      - [Conda Kullanarak Kurulum](#112-conda-kullanarak-kurulum)
    
-2. **Veri Yapıları**
+(**2. Veri Yapıları**)[#2-pandas-veri-yapıları]
 
   - **Pandas Serileri**
       - Seri nedir?
